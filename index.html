@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="assets/style.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -37,5 +39,17 @@
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="js/vendor/jquery.ui.touch-punch.min.js"></script>
         <script src="js/google-docs-site.1.0.js"></script>
+
+        <script>
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+              if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                  document.location.href = "/admin/";
+                });
+              }
+            });
+          }
+        </script>
     </body>
 </html>

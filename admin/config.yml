@@ -21,4 +21,4 @@ collections:
             name: "menu"
             widget: "list"
             collapsed: false
-            default: [label: "Link name", name: "{{fields.name}}, widget: "string"]
+            default: [label: "Link name", name: "{{fields.name}}", widget: "string"]

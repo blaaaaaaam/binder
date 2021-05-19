@@ -3,7 +3,7 @@ var siteData;
 $(function() {
 
 	//load the json
-	$.get( "info.json", function( data ) {
+	$.get("info.json", function(data) {
 
 		//did it load json data as string or as an object?
 		if (typeof data == "string")
@@ -17,16 +17,18 @@ $(function() {
 		//create the navigation
 		var links = $('#navigation');
 		for (var property in data.menu) {
-    		if (data.menu.hasOwnProperty(property)) {
-    			var urlsafe = property.replace(/ /gi, '-');
-        		var item = $('<li class="menu-item">');
-        		item.addClass(urlsafe);
-        		item.html('<a href="#'+ property +'">'+property+'</a>');
-        		item.appendTo(links);
-        		//tmp
-        		var bk = data.menu[property];
-    		}
+			if (data.menu.hasOwnProperty(property)) {
+				var urlsafe = property.replace(/ /gi, '-');
+				var item = $('<li class="menu-item">');
+				item.addClass(urlsafe);
+				item.html('<a href="#' + property + '">' + property + '</a>');
+				item.appendTo(links);
+				//tmp
+				var bk = data.menu[property];
+			}
 		}
+
+		console.log(data.menu2);
 
 		//create the about section
 		var about = $('.about');
@@ -35,62 +37,71 @@ $(function() {
 		//load the google doc
 		locationHashChanged();
 
-		$('#menu-open').click(function(){
+		$('#menu-open').click(function() {
 			$("#navigation").toggle();
 			$("#menu").toggleClass("border");
 		});
 
-		$("#menu").draggable({ cancel: "li" });
-    	// $( "div, p" ).disableSelection();
+		$("#menu").draggable({
+			cancel: "li"
+		});
+		// $( "div, p" ).disableSelection();
 
 		// create the google analytics
 		var analytics = data.analytics;
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 		ga('create', analytics, 'auto');
 		ga('send', 'pageview');
 
 	});
 
-    // Keep navigation from getting borked when dragged on wider views
-    // and reset it gracefully when transitioning to narrower views
-    // 768 matches the CSS mobile breakpoint, if you change it here
-    // change it in the CSS as well. Thanks!
-    //
-    // N.B. If touch-punch is imported, this doesn't prevent moving the menu
-    // around on touch devices. If you don't like that remove touch-punch.
-    $(window).resize(function() {
-        if(window.innerWidth < 768) {
-            $("#menu").draggable('disable').attr('style','');
-        } else if(window.innerWidth > 768) {
-            $("#menu").draggable('enable');
-            $("#navigation").attr('style','');
-        };
-    });
+	// Keep navigation from getting borked when dragged on wider views
+	// and reset it gracefully when transitioning to narrower views
+	// 768 matches the CSS mobile breakpoint, if you change it here
+	// change it in the CSS as well. Thanks!
+	//
+	// N.B. If touch-punch is imported, this doesn't prevent moving the menu
+	// around on touch devices. If you don't like that remove touch-punch.
+	$(window).resize(function() {
+		if (window.innerWidth < 768) {
+			$("#menu").draggable('disable').attr('style', '');
+		} else if (window.innerWidth > 768) {
+			$("#menu").draggable('enable');
+			$("#navigation").attr('style', '');
+		};
+	});
 
 	//little fix for the iframe size on mobile
 	//mobile hack
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- 		mobile = true;
-        // Add body class to target styles for touch devices with CSS
-        $('body').addClass('touch-device');
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		mobile = true;
+		// Add body class to target styles for touch devices with CSS
+		$('body').addClass('touch-device');
 	}
 
 });
 
 function locationHashChanged() {
 	var item = window.location.hash;
-	item = item.replace('#','');
-	item = decodeURI(item);//thanks Eran!
+	item = item.replace('#', '');
+	item = decodeURI(item); //thanks Eran!
 	$('li a').removeClass('active');
 
-	if (siteData.menu.hasOwnProperty(item)){
+	if (siteData.menu.hasOwnProperty(item)) {
 		$('#backgrnd').attr('src', siteData.menu[item]);
 		var urlsafe = item.replace(/ /gi, '-');
-		$('.'+urlsafe+' a').addClass('active');
+		$('.' + urlsafe + ' a').addClass('active');
 	} else {
 		//load the first one
 		$('#backgrnd').attr('src', siteData.menu[Object.keys(siteData.menu)[0]]);

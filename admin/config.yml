@@ -7,17 +7,21 @@ public_folder: /media
 collections:
   - label: "Settings"
     name: "settings"
+    editor:
+      preview: false
     files:
-      - label: "Site Info"
-        name: "metadata"
-        delete: false
-        file: "info.json"
-        fields:
-          - {label: "Site Title", name: "title", widget: "string"}
-          - {label: "Logo", name: "logo", widget: "hidden", default: "logo.png"}
-          - {label: "About/Tagline", name: "about", widget: "string"}
-          - {label: "Google Analytics", name: "analytics", widget: "string"}
-          - label: "Menu2"
-            name: "menu2"
-            widget: "list"
-            default: ["link"]
+    - label: "Site Settings"
+      name: "sitesettings"
+      file: "info.json"
+      delete: false
+      fields:
+        - {label: "Site Title", name: "title", widget: "string"}
+        - {label: "Logo", name: "logo", widget: "hidden", default: "logo.png"}
+        - {label: "About/Tagline", name: "about", widget: "string"}
+        - {label: "Google Analytics", name: "analytics", widget: "string"}
+        - label: "Menu"
+          name: "menu2"
+          widget: "list"
+          fields:
+            - {label: Link title, name: title, widget: string }
+            - {label: Link, name: link, widget: string}

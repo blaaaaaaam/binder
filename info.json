@@ -12,5 +12,39 @@
     "PDF": "http://www.nasa.gov/pdf/373665main_NASA-SP-2009-566.pdf",
     "Youtube": "https://www.youtube.com/embed/Sdi2S1PHS_s",
     "Wikipedia": "https://en.wikipedia.org/wiki/Web_page"
-  }
+  },
+  "menu2": [
+    {
+      "title": "About",
+      "link": "https://docs.google.com/document/d/1L8uIUdE58AsP-jnHD_H6df3T2DNFsegImPidkTwpYLw/"
+    },
+    {
+      "title": "Download",
+      "link": "https://docs.google.com/document/d/1aKVEphpLq3UUBkhoStJVhmkiOWRQmALAj-bphbk-KTU/"
+    },
+    {
+      "title": "Binder In-Use",
+      "link": "https://docs.google.com/document/d/1q9957u3P0SfFzwTzaWlu1ZeJ4FEZ0H4MF-cJBSm4Y-s/"
+    },
+    {
+      "title": "Google Slides",
+      "link": "https://docs.google.com/presentation/d/1gdX17MpgdyhiAQKTPehMWEYf914cYF4GtuY7m1jD7Qo/embed?start=true&loop=true&delayms=5000"
+    },
+    {
+      "title": "Tumblr",
+      "link": "http://cempontraoryartdaily.tumblr.com/"
+    },
+    {
+      "title": "PDF",
+      "link": "http://www.nasa.gov/pdf/373665main_NASA-SP-2009-566.pdf"
+    },
+    {
+      "title": "Youtube",
+      "link": "https://www.youtube.com/embed/Sdi2S1PHS_s"
+    },
+    {
+      "title": "Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Web_page"
+    }
+  ]
 }

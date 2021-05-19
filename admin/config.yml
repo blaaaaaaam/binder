@@ -17,8 +17,8 @@ collections:
           - {label: "Logo", name: "logo", widget: "hidden", default: "logo.png"}
           - {label: "About/Tagline", name: "about", widget: "string"}
           - {label: "Google Analytics", name: "analytics", widget: "string"}
-          - label: "Menu"
-            name: "menu"
+          - label: "Menu2"
+            name: "menu2"
             widget: "list"
             collapsed: false
             default: ["link"]

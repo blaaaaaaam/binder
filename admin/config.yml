@@ -20,5 +20,4 @@ collections:
           - label: "Menu2"
             name: "menu2"
             widget: "list"
-            collapsed: false
             default: ["link"]

@@ -12,8 +12,8 @@ $(function() {
 		siteData = data;
 
 		//create the title
-		document.title = data.title; 
-		
+		document.title = data.title;
+
 		//create the navigation
 		var links = $('#navigation');
 		for (var property in data.menu) {
@@ -42,6 +42,17 @@ $(function() {
 
 		$("#menu").draggable({ cancel: "li" });
     	// $( "div, p" ).disableSelection();
+
+		// create the google analytics
+		var analytics = data.analytics;
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', analytics, 'auto');
+		ga('send', 'pageview');
+
 	});
 
     // Keep navigation from getting borked when dragged on wider views
@@ -59,7 +70,7 @@ $(function() {
             $("#navigation").attr('style','');
         };
     });
-	
+
 	//little fix for the iframe size on mobile
 	//mobile hack
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -73,7 +84,7 @@ $(function() {
 function locationHashChanged() {
 	var item = window.location.hash;
 	item = item.replace('#','');
-	item = decodeURI(item);//thanks Eran! 
+	item = decodeURI(item);//thanks Eran!
 	$('li a').removeClass('active');
 
 	if (siteData.menu.hasOwnProperty(item)){

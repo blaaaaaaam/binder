@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+
+media_folder: static/media
+public_folder: /media
+
+collections:
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "Site Info"
+        name: "metadata"
+        delete: false
+        file: "info.json"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "hidden", default: "logo.png"}
+          - {label: "About/Tagline", name: "about", widget: "string"}
+          - {label: "Google Analytics", name: "analytics", widget: "string"}
+          - label: "Menu"
+            name: "menu"
+            widget: "list"
+            collapsed: false
+            default: [label: "Link name", name: "{{fields.name}}, widget: "string"]

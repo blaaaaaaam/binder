@@ -2,6 +2,7 @@
 	"title": "Binder",
 	"logo" : "logo.png",
 	"about" : "Link some sites together.",
+	"analytics" : "",
 	"menu" : {
 		"About" : "https://docs.google.com/document/d/1L8uIUdE58AsP-jnHD_H6df3T2DNFsegImPidkTwpYLw/",
 		"Download" : "https://docs.google.com/document/d/1aKVEphpLq3UUBkhoStJVhmkiOWRQmALAj-bphbk-KTU/",

@@ -13,6 +13,12 @@ fetch('info.json').then(function(response){
   // create title
   document.title = data.title
 
+  // create favicon
+  document.querySelector("link[rel~='icon']").href = data.favicon
+
+  // create logo
+  document.querySelector('#logo').src = data.logo
+
   // create navigation
   let links = document.querySelector('#navigation')
   data.menu.forEach(element => {

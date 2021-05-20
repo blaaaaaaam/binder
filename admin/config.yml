@@ -27,7 +27,6 @@ collections:
         - label: "Favicon"
           name: "favicon"
           widget: "image"
-          media_folder: ../
           default: "/favicon.png"
           media_library:
             config:

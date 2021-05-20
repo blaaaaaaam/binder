@@ -3,6 +3,8 @@
   "logo": "logo.png",
   "about": "Tagline",
   "analytics": "UA-XXXXX-X",
+  "logo": "assets/logo.png",
+  "favicon": "assets/favicon.png",
   "menu": [
     {
       "title": "About",

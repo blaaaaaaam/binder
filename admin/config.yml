@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
 
-# media_folder: assets
+media_folder: assets
 
 collections:
   - label: "Settings"
@@ -21,14 +21,13 @@ collections:
           name: "logo"
           widget: "image"
           default: "/logo.png"
-          media_folder: assets
           media_library:
             config:
               multiple: false
         - label: "Favicon"
           name: "favicon"
           widget: "image"
-          media_folder: /
+          media_folder: ../
           default: "/favicon.png"
           media_library:
             config:

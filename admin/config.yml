@@ -16,7 +16,6 @@ collections:
       fields:
         - {label: "Site Title", name: "title", widget: "string"}
         - {label: "About/Tagline", name: "about", widget: "string"}
-        - {label: "Google Analytics", name: "analytics", widget: "string"}
         - label: "Logo"
           name: "logo"
           widget: "image"
@@ -29,6 +28,7 @@ collections:
           name: "css"
           widget: "file"
           default: "/style.css"
+        - {label: "Google Analytics", name: "analytics", widget: "string"}
         - label: "Menu"
           name: "menu"
           widget: "list"

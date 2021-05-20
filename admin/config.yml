@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
 
-media_folder: static/media
-public_folder: /media
+media_folder: /assets
+public_folder: /assets
 
 collections:
   - label: "Settings"
@@ -16,11 +16,12 @@ collections:
       delete: false
       fields:
         - {label: "Site Title", name: "title", widget: "string"}
-        - {label: "Logo", name: "logo", widget: "hidden", default: "logo.png"}
         - {label: "About/Tagline", name: "about", widget: "string"}
         - {label: "Google Analytics", name: "analytics", widget: "string"}
+        - {label: "Logo", name: "logo", widget:"image", default: "logo.png"}
+        - {label: "Favicon", name: "favicon", widget:"image", default: "favicon.png"}
         - label: "Menu"
-          name: "menu2"
+          name: "menu"
           widget: "list"
           fields:
             - {label: Link title, name: title, widget: string }

@@ -1,55 +1,36 @@
 <!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" href="favicon.ico?v=2" />
-        <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="assets/style.css">
 
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="assets/logo.png">
+      <div class="about"></div>
+    </header>
 
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <img id="logo" src="assets/logo.png">
-        <div class="about"></div>
+    <menu id="menu">
+      <div id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <img id="logo-touch" src="assets/logo.png">
+      <ul id="navigation">
+      </ul>
+    </menu>
 
-        <div id="menu">
-            <div id="menu-open">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <img id="logo-touch" src="assets/logo.png">
-            <ul id="navigation">
-            </ul>
-        </div>
+    <main id="background-site"><iframe name="backgrnd" id="backgrnd" scrolling="yes" src=""></iframe></main>
 
-        <div id="background-site"><iframe name="backgrnd" id="backgrnd" scrolling="yes" src=""></iframe></div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-        <script src="js/vendor/jquery.ui.touch-punch.min.js"></script>
-        <script src="js/google-docs-site.1.0.js"></script>
-
-        <script>
-          if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-              if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                  document.location.href = "/admin/";
-                });
-              }
-            });
-          }
-        </script>
-    </body>
+    <script src="assets/script.js"></script>
+  </body>
 </html>

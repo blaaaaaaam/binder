@@ -24,7 +24,14 @@ collections:
           media_library:
             config:
               multiple: false
-        - {label: "Favicon", name: "favicon", widget:"image", default: "favicon.png"}
+        - label: "Favicon"
+          name: "favicon"
+          widget: "image"
+          default: "/favicon.png"
+          media_folder: "/"
+          media_library:
+            config:
+              multiple: false
         - label: "Menu"
           name: "menu"
           widget: "list"

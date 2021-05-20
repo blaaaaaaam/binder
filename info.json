@@ -5,6 +5,7 @@
   "analytics": "UA-XXXXX-X",
   "logo": "assets/logo.png",
   "favicon": "assets/favicon.png",
+  "css": "assets/style.css",
   "menu": [
     {
       "title": "About",

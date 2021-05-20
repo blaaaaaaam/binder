@@ -16,6 +16,9 @@ fetch('info.json').then(function(response){
   // create favicon
   document.querySelector("link[rel~='icon']").href = data.favicon
 
+  // create css
+  document.querySelector("link[rel~='stylesheet']").href = data.css
+
   // create logo
   document.querySelector('#logo').src = data.logo
 

@@ -1,7 +1,7 @@
 # binder + netlify cms
 \
-This fork of Clement Valla's [Binder](https://github.com/clementvalla/binder) adds support for using Netlify CMS to update the json file.
-It also removes the need to jQuery and only uses vanilla js.
+This fork of Clement Valla's [Binder](https://github.com/clementvalla/binder) enables integration with [Netlify CMS](https://www.netlifycms.org/) to update the info.json file.
+It also removes the dependency on jQuery and only uses vanilla js.
 
 \
 To deploy:

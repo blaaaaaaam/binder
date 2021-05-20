@@ -1,10 +1,10 @@
 {
   "title": "Binder",
-  "logo": "/assets/logo2.png",
+  "logo": "/assets/logo.png",
   "about": "Tagline",
   "analytics": "UA-XXXXX-X",
-  "favicon": "/assets/favicon2.png",
-  "css": "/assets/style2.css",
+  "favicon": "/assets/favicon.png",
+  "css": "/assets/style.css",
   "menu": [
     {
       "title": "About",
